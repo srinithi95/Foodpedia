@@ -14,7 +14,6 @@ const Header = () => {
     }
 
     const titleStyle = {
-        fontFamily: 'Roboto',
         fontStyle: 'normal',
         fontWeight: 900,
         fontSize: '36px',
@@ -25,7 +24,6 @@ const Header = () => {
     }
 
     const linkStyle = {
-        fontFamily: 'Roboto',
         fontStyle: 'normal',
         fontWeight: 'normal',
         fontSize: '18px',

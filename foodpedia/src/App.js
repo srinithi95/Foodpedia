@@ -6,6 +6,8 @@ import Login from './components/Login'
 import Restaurant from './components/Restaurant'
 import Homepage from './components/Homepage'
 import NavBar from './components/NavBar'
+import Forgot from './components/Forgot';
+import Register from './components/Register';
 import Search from './components/Search'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
@@ -17,11 +19,13 @@ function App() {
       <NavBar />
         {/* Routes for different pages in the application */}
         <Routes>
-          <Route exact path='/' element={<Homepage/>}/>
-          <Route exact path='/about' element={<About/>}/>
-          <Route exact path='/login' element={<Login/>}/>
-          <Route exact path='/search' element={<Search/>}/>
-          <Route exact path='/restaurant' element={<Restaurant/>}/>
+          <Route path='/' element={<Homepage/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/forgot' element={<Forgot/>}/>
+          <Route path='/search' element={<Search/>}/>
+          <Route path='/restaurant' element={<Restaurant/>}/>
         </Routes>
     </div>
   );

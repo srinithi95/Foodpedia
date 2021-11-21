@@ -27,6 +27,7 @@ const Homepage = () => {
     }
 
     return (
+
         <div>
             <div style={homepageStyle}>
                 <div style={missionStyle}>
@@ -48,8 +49,6 @@ const Homepage = () => {
                 </CardGroup>
             </div>
             <br/>
-
-
         </div>
 
     )

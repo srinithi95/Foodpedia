@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { search } from '../redux/actions/searchActions'
 import { useNavigate } from "react-router-dom";
-import { Button, InputGroup, FormControl, Form, Dropdown } from 'react-bootstrap'
-import { BsSearch } from 'react-icons/bs'
+import { Button, InputGroup, FormControl, } from 'react-bootstrap'
+import { BsSearch, BsFillBasket2Fill } from 'react-icons/bs'
 
 const NavBar = () => {
 
@@ -28,6 +28,12 @@ const NavBar = () => {
         console.log(find + near)
         dispatch(search(find, near))
         navigate('/search')
+    }
+
+    const onCart = (e) => {
+        e.preventDefault();
+        dispatch(search(find, near))
+        navigate('/cart')
     }
 
     return (
@@ -67,6 +73,14 @@ const NavBar = () => {
                 />
                 <Button onClick={onClick} style={{ backgroundColor: "#FFA6A6", borderColor: '#FFA6A6', color: 'black' }}><BsSearch /></Button>
             </InputGroup>
+
+            <div className='mb-3' onClick={onCart} style={{ position: 'relative', left: 550, height: 50, width: 50, backgroundColor: "#FFA6A6", borderColor: '#FFA6A6', color: 'black', borderRadius: 8 }}>
+                <div style={{display:'grid',height:'100%',justifyContent:'center',alignContent:'center'}}>
+                <BsFillBasket2Fill />
+                </div>
+            </div>
+
+
         </div>
     )
 }

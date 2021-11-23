@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header'
 import About from './components/About'
 import Login from './components/Login'
-import Restaurant from './components/Restaurant'
+import Restaurant from './components/Restaurant.jsx'
 import Homepage from './components/Homepage'
 import NavBar from './components/NavBar'
 import Cart from './components/Cart'

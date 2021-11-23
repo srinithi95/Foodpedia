@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import data from "../data.json";
 import Card from "./card/Card.jsx";
 import Filter from "./filter/Filter.jsx";
- 
+// reference was https://codesandbox.io/s/react-ecommerce-forked-wp1x1?file=/src/components/core/home/Home.jsx and access date was 11/22/21
 // Restaurant should have certain names to be displayed.
 const Restaurant = () => {
   const [products, setProducts] = useState([]);
@@ -33,14 +33,14 @@ const Restaurant = () => {
 
   return (
     <div className="container-fluid">
-      <h2>Products: {filteredProducts.length}</h2>
+      
       <Filter
         handleSort={setSortBy}
         handleTagChange={setSelectedTag}
         selectedTag={selectedTag}
         sortBy={sortBy}
       />
-      <hr />
+     
       <div className="row custom-card">
         {filteredProducts.map((product) => (
           <div key={product.id} className="col-md-3 mb-2">

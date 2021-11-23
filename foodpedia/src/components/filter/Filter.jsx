@@ -10,7 +10,7 @@ function Filter({ handleSort, handleTagChange, selectedTag, sortBy }) {
       <div className="row">
         <div className="col-12 col-md-9">
           <p className=" mr-2">
-            Filters: <span className="mr-4"></span>
+            <span className="mr-4"></span>
             {/* This displays all items for all button. */
             allTags.map((all, idx) => (
               <button
@@ -44,17 +44,6 @@ function Filter({ handleSort, handleTagChange, selectedTag, sortBy }) {
               </button>
             ))}
           </p>
-        </div>
-        <div className="col-12 col-md-3">
-          <select
-            className="form-control"
-            onChange={(e) => handleSort(e.target.value)}
-            value={sortBy}
-          >
-            <option value="">Sort by</option>
-            <option value="lowest">Lowest to highest</option>
-            <option value="highest">Highest to lowest</option>
-          </select>
         </div>
       </div>
     </div>

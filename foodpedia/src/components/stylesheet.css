@@ -90,3 +90,16 @@
   display: inline-block;
   font-size: 16px;
 }
+
+.div1 {
+  float: left;
+}
+
+.div2 {
+  float:right;
+}
+
+.star {background-image: url(path);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 20px;}

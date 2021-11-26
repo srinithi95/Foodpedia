@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import data from "../data.json";
 import Card from "./card/Card.jsx";
 import Filter from "./filter/Filter.jsx";
-import '../components/stylesheet.css';
-import star from '../components/star.jpg';
+// This is just a prototype for testing.
 // reference was https://codesandbox.io/s/react-ecommerce-forked-wp1x1?file=/src/components/core/home/Home.jsx and access date was 11/22/21
 // Restaurant should have certain names to be displayed.
 const Restaurant = () => {
@@ -35,11 +34,7 @@ const Restaurant = () => {
 
   return (
     <div className="container-fluid">
-       
-    <div class="div1"><h2>Wcdonalds</h2></div>
-    <div class="div2"><h3>30-40 Min : 4.4  <img src={star} alt="Logo" style={{ width: "9%"}} /></h3></div>
-    <br></br>
-    <br></br>
+      
       <Filter
         handleSort={setSortBy}
         handleTagChange={setSelectedTag}

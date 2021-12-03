@@ -13,7 +13,7 @@ import Search from './components/Search'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <Header />
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage/>}/>
           <Route path='/about' element={<About/>}/>
-          <Route path='/login' element={<Login/>}/>
+          <Route path='/login' element={<Login />}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/forgot' element={<Forgot/>}/>
@@ -32,5 +32,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

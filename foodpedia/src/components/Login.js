@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
+import { login } from '../redux/actions/loginActions'
+import { connect } from 'react-redux'
+import { useNavigate } from 'react-router';
 
 
-const Login = () => {
+const Login = (props) => {
 
     //states
     const [email, setEmail] = useState('')
@@ -32,11 +35,15 @@ const Login = () => {
         marginTop:5
     }
 
+    const navigate = useNavigate()
     // authentication
     const onClick = () => {
         setSubmit(true)
         if (emailCheck && passwordCheck) {
             console.log('SUCCESSFUL!')
+            props.login(email)
+            navigate('/')
+
         } else {
             console.log('UNSUCCESSUL :(')
         }
@@ -90,4 +97,16 @@ const Login = () => {
     )
 }
 
-export default Login
+const mapDispatchToProps = (dispatch) => {
+    return {
+        login: (email) => dispatch(login(email))
+    }
+}
+
+const mapStateToProps = state => {
+    return {
+        email: state.loginReducer.sessionEmail
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

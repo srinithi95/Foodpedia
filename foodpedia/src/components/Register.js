@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
+import {useNavigate} from 'react-router'
+import {register} from '../redux/actions/loginActions'
+import {connect} from 'react-redux'
 
 
-const Register = () => {
+const Register = (props) => {
 
     //states
     const [name, setName] = useState('')
@@ -36,11 +39,14 @@ const Register = () => {
         marginTop: 5
     }
 
+    const navigate = useNavigate();
     // authentication
     const onClick = () => {
         setSubmit(true)
         if (emailCheck && passwordCheck) {
             console.log('SUCCESSFUL!')
+            props.register(name,password,email)
+            navigate('/login')
         } else {
             console.log('UNSUCCESSUL :(')
         }
@@ -124,4 +130,9 @@ const Register = () => {
     )
 }
 
-export default Register
+const mapDispatchToProps = (dispatch) => {
+    return {
+        register:(name,password,email) => dispatch(register(name,password,email))
+    }
+}
+export default connect(mapDispatchToProps)(Register)

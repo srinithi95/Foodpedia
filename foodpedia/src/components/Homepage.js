@@ -38,7 +38,7 @@ const Homepage = () => {
 
                 </div>
                 <div>
-                    <img src={food} alt="Logo" style={{ width: "80%", display: "block" }} />
+                    <img src={food} alt="Logo" style={{ width: "75%", display: "block" }} />
                 </div>
             </div>
             <div style={missionStyle}>
@@ -48,7 +48,6 @@ const Homepage = () => {
                     <InfoCard img={card3} title='Deal of the Day' name='Banda Express' />
                 </CardGroup>
             </div>
-            <br/>
         </div>
 
     )

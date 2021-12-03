@@ -27,6 +27,8 @@ const NavBar = () => {
         e.preventDefault();
         console.log(find + near)
         dispatch(search(find, near))
+        setFind('')
+        setNear('')
         navigate('/search')
     }
 
@@ -56,6 +58,7 @@ const NavBar = () => {
                 <FormControl
                     placeholder="Restaurant, Cuisine..."
                     onChange={e => setFind(e.target.value)}
+                    value={find}
                     aria-label="Search"
                     aria-describedby="basic-addon1"
                     style={{ backgroundColor: 'white', borderColor: 'white' }}
@@ -67,6 +70,7 @@ const NavBar = () => {
                 <FormControl
                     placeholder="City, State..."
                     onChange={e => setNear(e.target.value)}
+                    value={near}
                     aria-label="Location"
                     aria-describedby="basic-addon1"
                     style={{ backgroundColor: 'white', borderColor: 'white' }}

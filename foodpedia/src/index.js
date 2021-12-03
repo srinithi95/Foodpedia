@@ -10,10 +10,10 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import searchReducer from './redux/reducers/searchReducer';
 import cartReducer from './redux/reducers/cartReducer'
-
+import loginReducer from './redux/reducers/loginReducer';
 
 const rootReducer = combineReducers({
-  searchReducer,cartReducer
+  searchReducer,cartReducer,loginReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));

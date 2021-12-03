@@ -9,10 +9,11 @@ import thunk from 'redux-thunk'
 import {BrowserRouter as Router} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import searchReducer from './redux/reducers/searchReducer';
+import cartReducer from './redux/reducers/cartReducer'
 
 
 const rootReducer = combineReducers({
-  searchReducer
+  searchReducer,cartReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));

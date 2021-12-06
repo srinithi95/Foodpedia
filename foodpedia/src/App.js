@@ -17,7 +17,8 @@ function App(props) {
   return (
     <div className="App">
       <Header />
-      <NavBar />
+      <br/>
+      {/* <NavBar /> */}
         {/* Routes for different pages in the application */}
         <Routes>
           <Route path='/' element={<Homepage/>}/>

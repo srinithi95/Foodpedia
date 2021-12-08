@@ -120,9 +120,11 @@
   .right-picture{
     float:right;
     width:50%;
+    
   }
   .right-picture img{
     max-width:100%
+    
   }
 
   .left-picture{
@@ -131,4 +133,9 @@
   }
   .left-picture img{
     max-width:100%
+  }
+
+  .general {
+font-size: 14px;
+outline: none;
   }

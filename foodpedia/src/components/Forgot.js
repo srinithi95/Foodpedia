@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import {useNavigate} from 'react-router'
+import './Login.css'
 
 const Forgot = () => {
 
@@ -12,7 +13,6 @@ const Forgot = () => {
 
     // styling
     const loginStyle = {
-        marginTop: 75,
         fontStyle: 'normal',
         display: 'flex',
         justifyContent: 'center',
@@ -43,7 +43,7 @@ const Forgot = () => {
 
     return (
         <div style={loginStyle}>
-            <div className='form-group' style={gridContainer}>
+            <div className='form-group' style={gridContainer} className='check'>
                 <div style={{ fontSize: 40 }}>
                     Forgot Password?
                 </div>
@@ -62,7 +62,7 @@ const Forgot = () => {
                 
                 <br />
                 <Button style={{ width: 400, height: 75, fontSize: 24, marginTop: 15, }} onClick={onClick}>Next</Button>
-                <div style={{fontSize:18,textAlign:'center', marginTop:15}}>
+                <div style={{fontSize:18,textAlign:'center', marginTop:15}} className='bottom'>
                     New to Foodpedia? <Link to='/register'>Create an Account</Link>
                 </div>
             </div>

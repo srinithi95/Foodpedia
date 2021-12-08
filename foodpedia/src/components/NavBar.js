@@ -40,20 +40,8 @@ const NavBar = () => {
 
     return (
         <div style={homepageStyle}>
-
+{/* 
             <InputGroup style={{ width: 1000, border: '1px solid black', borderRadius: 6 }} size='lg' className="mb-3">
-                {/* <Form.Select
-                        variant="outline-secondary"
-                        title="Cuisine"
-                        id="input-group-dropdown-1"
-                    >
-                        <option href="#">Cuisine</option>
-                        <option href="#">American</option>
-                        <option href="#">Chinese</option>
-                        <option href="#">Mexican</option>
-                        <option href="#">French</option>
-                        <option href="#">Indian</option>
-                    </Form.Select> */}
                 <InputGroup.Text id="basic-addon1" style={{ backgroundColor: 'white', borderColor: 'white' }}><b>Find</b></InputGroup.Text>
                 <FormControl
                     placeholder="Restaurant, Cuisine..."
@@ -82,7 +70,7 @@ const NavBar = () => {
                 <div style={{display:'grid',height:'100%',justifyContent:'center',alignContent:'center'}}>
                 <BsFillBasket2Fill />
                 </div>
-            </div>
+            </div> */}
 
 
         </div>

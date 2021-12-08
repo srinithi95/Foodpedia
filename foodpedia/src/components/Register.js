@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import {useNavigate} from 'react-router'
 import {register} from '../redux/actions/loginActions'
 import {connect} from 'react-redux'
+import './Login.css'
 
 
 const Register = (props) => {
@@ -22,7 +23,6 @@ const Register = (props) => {
 
     // styling
     const loginStyle = {
-        marginTop: 75,
         fontStyle: 'normal',
         display: 'flex',
         justifyContent: 'center',
@@ -53,7 +53,7 @@ const Register = (props) => {
     }
 
     return (
-        <div style={loginStyle}>
+        <div style={loginStyle} className='check'>
             <div className='form-group' style={gridContainer}>
                 <div style={{ fontSize: 40 }}>
                     Create New Account
@@ -120,7 +120,7 @@ const Register = (props) => {
                 <br />
                 <Button style={{ width: 400, height: 75, fontSize: 24, marginTop: 15, }} onClick={onClick}>Register</Button>
 
-                <div style={{ fontSize: 18, textAlign: 'center', marginTop: 15 }}>
+                <div style={{ fontSize: 18, textAlign: 'center', marginTop: 15 }} className='bottom'>
                     Already use Foodpedia? <Link to='/login'>Sign in</Link>
                 </div>
             </div>

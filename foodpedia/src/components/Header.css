@@ -1,0 +1,27 @@
+.link {
+
+    font-size: small;
+
+}
+
+.title {
+    font-weight: 900;
+    font-size: xx-large;
+    color: rgb(81, 88, 116);
+    text-align: center;
+}
+
+@media (min-width:40em) {
+    .link {
+        font-size: medium;
+    }
+    .title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 38px;
+        justify-items: start;
+        color: rgb(81, 88, 116);
+        text-align: left;
+    }
+}

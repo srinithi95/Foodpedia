@@ -124,3 +124,11 @@
   .right-picture img{
     max-width:100%
   }
+
+  .left-picture{
+    float:left;
+    width:50%;
+  }
+  .left-picture img{
+    max-width:100%
+  }

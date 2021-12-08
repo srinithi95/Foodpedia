@@ -1,13 +1,13 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import smartphone from '../components/womendinnersmartphone.jpg';
- 
+import ecofriendly from '../components/ecofriendlybox.JPG'; 
  <link rel="stylesheet" href="stylesheet.css"></link>
 
 const About = () => {
   
     return (
-      <div>We are a "Mission Statement typa thing"
+      <div>We are a "Mission Statement typa"
 <div class="row">
   
   <div class="col-sm-2">
@@ -26,7 +26,10 @@ const About = () => {
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
+      <h2>Mission Statement</h2>
         <h5 class="left-text"> </h5>
+        
+
         All of our members are senior students of San Francisco State univeristy.
         A food ordering and delivery application to save food, make it affordable to customers and profitable to restaurants.
         FoodPedia is a food ordering and delivery application which would help people to order food at a discounted price using 
@@ -45,7 +48,16 @@ const About = () => {
         
         <br></br>
         <p class="card-text">General information</p>
-        
+        <h2>General Information</h2>
+        We are saving people from hunger, poverty, and time.  Our focus is to save the leftover food and ingredients in restaurants
+         at the end of each day which would either go to waste or expire. To deliver your food faster and in an affordable manner, 
+         we have partnered with local delivery services and companies. The motivation behind this application is to make the food more
+          affordable to people and also make the restaurants more profitable by saving the food, ingredients and the environment. 
+          To encourage the practice of saving the environment and food, we will reimburse all partnering restaurants for the packaging 
+          material used for the orders if they are 100% compostable and eco-friendly. 
+          <div class="left-picture" >
+         <img src ={ecofriendly} style={{ width: "100%"}}></img>
+         </div>
         <br></br>
         <br></br>
       </div>

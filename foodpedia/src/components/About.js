@@ -7,23 +7,12 @@ import ecofriendly from '../components/ecofriendlybox.JPG';
 const About = () => {
   
     return (
-      <div>We are a "Mission Statement typa"
-<div class="row">
+      <div>
+<div class="row" >
   
-  <div class="col-sm-2">
-      <div class="card-body">
-        <h5 class="card-title">Meet the team:</h5>
-      </div>
-  </div>
-  <div class="col-sm-1">
-      <div class="card-body">
-        <p class="card-text">Sriniti</p>
-        <p class="card-text">Chris</p>
-        <p class="card-text">Jimmy</p>
-        <p class="card-text">Dev</p>
-      </div>
-  </div>
-  <div class="col-sm-6">
+
+ 
+  <div class="col-sm-6" id="center">
     <div class="card">
       <div class="card-body">
       <h2>Mission Statement</h2>

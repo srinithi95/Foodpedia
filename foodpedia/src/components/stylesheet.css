@@ -139,3 +139,7 @@
 font-size: 14px;
 outline: none;
   }
+
+  #center {
+    width:1200px; margin:0 auto;
+  }

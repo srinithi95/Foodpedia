@@ -36,8 +36,8 @@ const Restaurant = () => {
   return (
     <div className="container-fluid">
        
-    <div class="div1" style={{marginLeft:75}}><h2>Wcdonalds</h2></div>
-    <div class="div2"><h3>30-40 Min : 4.4  <img src={star} alt="Logo" style={{ width: "9%"}} /></h3></div>
+    <div class="div1" style={{marginLeft:75}}><h2>Wcdonalds</h2></div> <img src={star} alt="Logo" style={{ width: "3%", float: 'right'}} />
+    <div class="div2"><h3>30-40 Min : 4.4  </h3> </div> 
     <br></br>
     <br></br>
       <Filter

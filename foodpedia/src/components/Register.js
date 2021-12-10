@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
+import {useNavigate} from 'react-router'
+import {register} from '../redux/actions/loginActions'
+import {connect} from 'react-redux'
+import './Login.css'
 
 
-const Register = () => {
+const Register = (props) => {
 
     //states
     const [name, setName] = useState('')
@@ -19,7 +23,6 @@ const Register = () => {
 
     // styling
     const loginStyle = {
-        marginTop: 75,
         fontStyle: 'normal',
         display: 'flex',
         justifyContent: 'center',
@@ -36,18 +39,21 @@ const Register = () => {
         marginTop: 5
     }
 
+    const navigate = useNavigate();
     // authentication
     const onClick = () => {
         setSubmit(true)
         if (emailCheck && passwordCheck) {
             console.log('SUCCESSFUL!')
+            props.register(name,password,email)
+            navigate('/login')
         } else {
             console.log('UNSUCCESSUL :(')
         }
     }
 
     return (
-        <div style={loginStyle}>
+        <div style={loginStyle} className='check'>
             <div className='form-group' style={gridContainer}>
                 <div style={{ fontSize: 40 }}>
                     Create New Account
@@ -114,7 +120,7 @@ const Register = () => {
                 <br />
                 <Button style={{ width: 400, height: 75, fontSize: 24, marginTop: 15, }} onClick={onClick}>Register</Button>
 
-                <div style={{ fontSize: 18, textAlign: 'center', marginTop: 15 }}>
+                <div style={{ fontSize: 18, textAlign: 'center', marginTop: 15 }} className='bottom'>
                     Already use Foodpedia? <Link to='/login'>Sign in</Link>
                 </div>
             </div>
@@ -124,4 +130,9 @@ const Register = () => {
     )
 }
 
-export default Register
+const mapDispatchToProps = (dispatch) => {
+    return {
+        register:(name,password,email) => dispatch(register(name,password,email))
+    }
+}
+export default connect(mapDispatchToProps)(Register)

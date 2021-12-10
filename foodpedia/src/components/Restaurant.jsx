@@ -36,7 +36,7 @@ const Restaurant = () => {
   return (
     <div className="container-fluid">
        
-    <div class="div1"><h2>Wcdonalds</h2></div>
+    <div class="div1" style={{marginLeft:75}}><h2>Wcdonalds</h2></div>
     <div class="div2"><h3>30-40 Min : 4.4  <img src={star} alt="Logo" style={{ width: "9%"}} /></h3></div>
     <br></br>
     <br></br>
@@ -47,9 +47,9 @@ const Restaurant = () => {
         sortBy={sortBy}
       />
      
-      <div className="row custom-card">
+      <div className="row custom-card" style={{marginLeft:50,marginRight:50}}>
         {filteredProducts.map((product) => (
-          <div key={product.id} className="col-md-3 mb-2">
+          <div key={product.id} className="col-md-3 mb-2" style={{marginTop:'2rem'}}>
             <Card products={product} />
           </div>
         ))}

@@ -103,3 +103,43 @@
   background-repeat: no-repeat;
   width: 10px;
   height: 20px;}
+
+  .main-topic{
+    border:1px solid blue;
+  }
+  /** Clearfix **/
+  .main-topic::after{
+    content:"";
+    display:block;
+    clear:both;
+  }
+  .left-text{
+    width:50%;
+    float:left;
+  }
+  .right-picture{
+    float:right;
+    width:50%;
+    
+  }
+  .right-picture img{
+    max-width:100%
+    
+  }
+
+  .left-picture{
+    float:left;
+    width:50%;
+  }
+  .left-picture img{
+    max-width:100%
+  }
+
+  .general {
+font-size: 14px;
+outline: none;
+  }
+
+  #center {
+    width:1200px; margin:0 auto;
+  }

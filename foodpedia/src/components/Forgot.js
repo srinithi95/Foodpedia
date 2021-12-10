@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
-import {useNavigate} from 'react-router'
+
 
 const Forgot = () => {
 
@@ -29,13 +29,11 @@ const Forgot = () => {
         marginTop:5
     }
     
-    const navigate = useNavigate();
     // authentication
     const onClick = () => {
         setSubmit(true)
         if (emailCheck) {
             console.log('SUCCESSFUL!')
-            navigate('/login')
         } else {
             console.log('UNSUCCESSUL :(')
         }

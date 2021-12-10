@@ -1,0 +1,396 @@
+.tab {
+  /* background-color: red; */
+  display: flex;
+  height: 8vh;
+  align-items: center;
+  padding: 4rem 6rem;
+}
+.tab img {
+  width: 75%;
+  height: auto;
+}
+
+.backBtn {
+  padding-right: 1rem;
+}
+
+.mainContainer {
+  display: flex;
+}
+
+.leftSide {
+  /* background-color: hotpink; */
+  width: 70%;
+}
+
+/* Products Table */
+
+.cartPage {
+  margin: 80px 8rem;
+  border-right: 1px solid grey;
+}
+
+.cartPage table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.cartInfo {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.cartInfo h3 {
+  padding-top: 60px;
+}
+
+.cartPage th {
+  text-align: left;
+  padding: 5px;
+  padding-left: 60px;
+  color: black;
+  background-color: #d9d9d9;
+  font-weight: normal;
+  height: 7vh;
+  font-size: 20px;
+}
+
+.cartPage td {
+  padding: 40px 5px;
+  font-size: 1.4rem;
+}
+
+.cartPage td select {
+  width: 40px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.cartPage td a {
+  color: grey;
+  font-size: 12px;
+}
+
+.cartPage td img {
+  width: 50%;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.hLine {
+  width: 200%;
+  border: 1px solid grey;
+}
+
+.rightSide {
+  /* background-color: indianred; */
+  width: 30%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: -4.4rem;
+}
+
+.deliveryText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem;
+}
+
+.deliverySubtotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  height: 1px;
+}
+
+.linko {
+  border: none;
+  background-color: orange;
+  font-size: 20px;
+
+  height: 7vh;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.linko:hover {
+  color: white;
+}
+
+/* P A Y M E N T | S T Y L E S */
+
+.mainPaymentContainer {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  /* background-color: yellow; */
+}
+
+.paymentLeft {
+  display: flex;
+  width: 60%;
+  height: 100vh;
+  border-right: 1px gray solid;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0px 7rem;
+}
+
+.paymentLeft h3 {
+  margin-top: 0rem;
+}
+.deliveryTime {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.deliveryTimeInfo {
+  display: flex;
+}
+.deliveryTimeInfo img {
+  width: 15rem;
+  height: 12vh;
+  margin-top: -3rem;
+}
+
+.addressInfo {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  /* background-color: blue; */
+}
+
+.addressInfo form {
+  /* background-color: black; */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.addressInfo form input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+.addressInfo form textarea::placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+.fTI,
+.sTI {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addressInfo .firstName,
+.lastName,
+.contactNumber,
+.email {
+  width: 45%;
+  height: 5vh;
+  font-size: 1.1rem;
+  border: rgb(180, 180, 180) 1px solid;
+  padding: 1rem;
+  outline: none;
+
+  /* border-radius: 5px; */
+}
+
+.addressInfo .addressField {
+  width: 100%;
+  height: 15vh;
+  font-size: 1rem;
+  /* border-radius: 5px; */
+  border: rgb(180, 180, 180) 1px solid;
+}
+
+.addressInfo .specialNotes {
+  width: 100%;
+  height: 10vh;
+  font-size: 1rem;
+  /* border-radius: 5px; */
+  border: rgb(180, 180, 180) 1px solid;
+}
+
+.paymentOptions {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2rem 0px;
+}
+.paymentMethods img:hover {
+  cursor: pointer;
+}
+.paymentRight {
+  display: flex;
+  width: 40%;
+  height: 70vh;
+  margin-left: -1.5rem;
+
+  justify-content: flex-start;
+  padding: 0px 4rem;
+  flex-direction: column;
+}
+
+.orderSummary {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.orderInfo {
+  width: 100%;
+}
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0px;
+}
+
+.orderSubTotal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0px;
+  font-weight: bolder;
+  width: 100%;
+}
+
+.orderSubTotal .orderPrice {
+  display: flex;
+  width: 70%;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  justify-content: space-between;
+}
+
+.deliverySummaryText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.placeOrder {
+  width: 30%;
+  height: 8vh;
+  position: absolute;
+  left: 64%;
+  top: 104%;
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.4rem;
+}
+
+.placeOrder:hover {
+  color: whitesmoke;
+}
+
+.backArrow:hover {
+  cursor: pointer;
+}
+
+/* C O N F I R M E D | P A G E */
+
+.mainConfirmPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ConfirmImage img {
+  width: 440px;
+  transform: rotate(265deg);
+}
+
+.ConfirmButtons {
+  display: flex;
+
+  width: 28%;
+  justify-content: space-between;
+}
+
+.ConfirmButtons button {
+  font-size: 1.4rem;
+  width: 15rem;
+  height: 7vh;
+  border: none;
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.ConfirmButtons button:hover {
+  color: whitesmoke;
+}
+
+/* .popup {
+  background-color: black;
+  opacity: 0.5px;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+} */
+
+.popupInfo {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  width: 30%;
+  height: 60vh;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.popupText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  color: rgb(66, 66, 66);
+}
+.popupInfo img {
+  width: 200px;
+  height: 200px;
+}
+
+.popupInfo button {
+  border: none;
+  background-color: orange;
+  font-size: 1.2rem;
+
+  height: 5vh;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+.popupInfo button:hover {
+  color: whitesmoke;
+}

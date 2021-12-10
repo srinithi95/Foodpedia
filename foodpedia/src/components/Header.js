@@ -1,10 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {connect} from 'react-redux'
-import { useNavigate } from 'react-router'
-import {login} from '../redux/actions/loginActions'
 
-const Header = (props) => {
+const Header = () => {
 
     const headerStyle = {
         backgroundColor: "#E7E7FF",
@@ -36,18 +33,6 @@ const Header = (props) => {
         paddingRight: 50
     }
 
-    const navigate = useNavigate();
-    const onClick = () => {
-        if (props.session) {
-            props.login('')
-            navigate('/login')
-        } else {
-            navigate('/login')
-        }
-    }
-
-
-
     return (
         <div style={headerStyle}>
             <div style={titleStyle}>
@@ -64,23 +49,11 @@ const Header = (props) => {
                     <Link to='/restaurant' style={{ textDecoration: "none", color: '#515874' }}>Restaurant</Link>
                 </div>
                 <div>
-                    {props.session ? <div  style={{ textDecoration: "none", color: '#515874' }} onClick={onClick}>Logout </div>: <div  style={{ textDecoration: "none", color: '#515874' }} onClick={onClick}>Login </div>}
+                    <Link to='/login' style={{ textDecoration: "none", color: '#515874' }}>Login</Link>
                 </div>
             </div>
         </div>
     )
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        login: (email) => dispatch(login(email))
-    }
-}
-
-const mapStateToProps = (state) => {
-    return {
-        session: state.loginReducer.sessionEmail
-  
-    }
-  }
-  export default connect(mapStateToProps,mapDispatchToProps)(Header);
+export default Header

@@ -17,7 +17,6 @@ function App(props) {
   return (
     <div className="App">
       <Header />
-      <br/>
       {/* <NavBar /> */}
         {/* Routes for different pages in the application */}
         <Routes>

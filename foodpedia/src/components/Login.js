@@ -53,7 +53,7 @@ const Login = (props) => {
     return (
         <div style={loginStyle} className='check' >
             <div className='form-group login' style={gridContainer} >
-                <div style={{ fontSize: 40 }} >
+                <div className='font' >
                     Welcome Back
                 </div>
                 <br />

@@ -4,13 +4,13 @@
 }
 
 .bottom {
-    display: grid;
     text-align: left;
     margin-bottom: 20px;
 }
 
-.check {
-
+.font {
+    font-size:30px;
+    text-align: center;
 }
 
 @media (min-width:40rem) {
@@ -20,5 +20,9 @@
     }
     .check {
         margin-top:75px
+    }
+    .font {
+        font-size:40px;
+        text-align: left;
     }
 }

@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
-import { login } from '../redux/actions/loginActions'
-import { connect } from 'react-redux'
-import { useNavigate } from 'react-router';
-import './Login.css'
 
 
-const Login = (props) => {
+const Login = () => {
 
     //states
     const [email, setEmail] = useState('')
@@ -18,6 +14,7 @@ const Login = (props) => {
 
     // styling
     const loginStyle = {
+        marginTop: 75,
         fontFamily: 'ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif',
         fontStyle: 'normal',
         display: 'flex',
@@ -25,8 +22,8 @@ const Login = (props) => {
     }
 
     const gridContainer = {
-        // display: 'grid',
-        // textAlign: 'left',
+        display: 'grid',
+        textAlign: 'left',
     }
 
     const errorMessage = {
@@ -35,15 +32,11 @@ const Login = (props) => {
         marginTop:5
     }
 
-    const navigate = useNavigate()
     // authentication
     const onClick = () => {
         setSubmit(true)
         if (emailCheck && passwordCheck) {
             console.log('SUCCESSFUL!')
-            props.login(email)
-            navigate('/')
-
         } else {
             console.log('UNSUCCESSUL :(')
         }
@@ -51,9 +44,9 @@ const Login = (props) => {
 
 
     return (
-        <div style={loginStyle} className='check' >
-            <div className='form-group login' style={gridContainer} >
-                <div style={{ fontSize: 40 }} >
+        <div style={loginStyle}>
+            <div className='form-group' style={gridContainer}>
+                <div style={{ fontSize: 40 }}>
                     Welcome Back
                 </div>
                 <br />
@@ -87,7 +80,7 @@ const Login = (props) => {
 
                 <Link to='/forgot' style={{ fontSize: 18, textAlign: 'center', marginTop: 15 }}>Forgot Password?</Link>
 
-                <div style={{ fontSize: 18, textAlign: 'center', marginTop: 5 }} className='bottom'>
+                <div style={{ fontSize: 18, textAlign: 'center', marginTop: 5 }}>
                     New to Foodpedia? <Link to='/register'>Create an Account</Link>
                 </div>
             </div>
@@ -97,16 +90,4 @@ const Login = (props) => {
     )
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        login: (email) => dispatch(login(email))
-    }
-}
-
-const mapStateToProps = state => {
-    return {
-        email: state.loginReducer.sessionEmail
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+export default Login

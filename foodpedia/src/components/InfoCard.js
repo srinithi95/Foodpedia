@@ -1,15 +1,16 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import card1 from '../images/card1.jpg'
-import './InfoCard.css'
 
 
 
 const InfoCard = ({img,title,name}) => {
     return (
         <div>
-            <Card className='infocard'>
+            <Card style={{ width: '25rem',borderRadius:'8' }}>
+                
                 <Card.Img variant="top" src={img} style={{height:250}}/>
+
                 <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>

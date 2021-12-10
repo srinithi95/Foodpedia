@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
-import {useNavigate} from 'react-router'
-import {register} from '../redux/actions/loginActions'
-import {connect} from 'react-redux'
-import './Login.css'
 
 
-const Register = (props) => {
+const Register = () => {
 
     //states
     const [name, setName] = useState('')
@@ -23,6 +19,7 @@ const Register = (props) => {
 
     // styling
     const loginStyle = {
+        marginTop: 75,
         fontStyle: 'normal',
         display: 'flex',
         justifyContent: 'center',
@@ -39,21 +36,18 @@ const Register = (props) => {
         marginTop: 5
     }
 
-    const navigate = useNavigate();
     // authentication
     const onClick = () => {
         setSubmit(true)
         if (emailCheck && passwordCheck) {
             console.log('SUCCESSFUL!')
-            props.register(name,password,email)
-            navigate('/login')
         } else {
             console.log('UNSUCCESSUL :(')
         }
     }
 
     return (
-        <div style={loginStyle} className='check'>
+        <div style={loginStyle}>
             <div className='form-group' style={gridContainer}>
                 <div style={{ fontSize: 40 }}>
                     Create New Account
@@ -120,7 +114,7 @@ const Register = (props) => {
                 <br />
                 <Button style={{ width: 400, height: 75, fontSize: 24, marginTop: 15, }} onClick={onClick}>Register</Button>
 
-                <div style={{ fontSize: 18, textAlign: 'center', marginTop: 15 }} className='bottom'>
+                <div style={{ fontSize: 18, textAlign: 'center', marginTop: 15 }}>
                     Already use Foodpedia? <Link to='/login'>Sign in</Link>
                 </div>
             </div>
@@ -130,9 +124,4 @@ const Register = (props) => {
     )
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        register:(name,password,email) => dispatch(register(name,password,email))
-    }
-}
-export default connect(mapDispatchToProps)(Register)
+export default Register

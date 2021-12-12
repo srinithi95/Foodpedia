@@ -25,12 +25,12 @@
     font-size: large;
 }
 #map-container{
-    height: 400px;
-    padding-left: 20%;
+    height: 310px;
+    padding-left: 5%;
 }
 #heading{
-    padding-left: 50px;
+    padding-left: 0%;
 }
 #card-display{
-    padding-left: 20%;
+    padding-left: 0%;
 }

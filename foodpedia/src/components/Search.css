@@ -1,0 +1,36 @@
+#left-column{
+    position: fixed;
+    top: 500px;
+}
+#heading-1{
+    font-size: xx-large;
+}
+#heading-2{
+    font-size: large;
+}
+#heading-3{
+    padding-left: 70px;
+}
+
+#heading-middle{
+    padding-left: 58px;
+
+}
+
+#right-column{
+    padding-left: 20%;
+}
+#heading-popular{
+  
+    font-size: large;
+}
+#map-container{
+    height: 310px;
+    padding-left: 5%;
+}
+#heading{
+    padding-left: 0%;
+}
+#card-display{
+    padding-left: 0%;
+}

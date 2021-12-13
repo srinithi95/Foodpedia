@@ -3,6 +3,8 @@ import DISH from "../images/dish.png";
 import Popup from "./Popup";
 import Info from "../images/info.png";
 import Order from "../images/food.jpg";
+import {Button} from 'react-bootstrap';
+
 const OrderConfirmed = () => {
   const [modal, setModal] = useState(false);
   const [modalOrder, setModalOrder] = useState(false);
@@ -28,8 +30,8 @@ const OrderConfirmed = () => {
         <h3>Latest Arrival by 7:40pm</h3>
 
         <div className="ConfirmButtons">
-          <button onClick={handleModal}>Contact Us</button>
-          <button onClick={handleOrderModal}>Your Order</button>
+          <Button onClick={handleModal}>Contact Us</Button> &nbsp;&nbsp;
+          <Button onClick={handleOrderModal}>Your Order</Button>
         </div>
       </div>
       {modalOrder && (

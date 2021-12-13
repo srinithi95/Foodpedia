@@ -89,7 +89,7 @@ const Search = (props) => {
         <div className="container-fluid">
       <div className="row" id="heading">
           <div style={{paddingLeft:"5%"}} className="col col-lg-5">
-          <p  style={{fontSize:"20px", paddingRight:"50%"}}>Showing 1-9 of 20</p>
+    <p  style={{fontSize:"20px", paddingRight:"50%"}}>Showing 1-9 of 11</p>
           </div>
      <div className="col col-md-3">
           <select id="inputState" class="form-control"  required>
@@ -102,7 +102,7 @@ const Search = (props) => {
        </div>
        <br/>
        <div id="map-container">
-    <ToolMap coordinates={coordinates}/><br/>
+    <ToolMap coordinates={coordinates}/><br/><br/><br/>
    </div>
    <div id="card-display" style={{paddingLeft:"5%", minWidth:"18rem"}} className="col-10  mb-4 custom-card">
     <CardGroup style={{ gap: 80, marginBottom: "10px" }} >

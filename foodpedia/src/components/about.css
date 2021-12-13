@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+ 
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.div1 {
+  float: left;
+}
+
+.div2 {
+  float:right;
+}
+
+.star {background-image: url(path);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 20px;}
+
+  .main-topic{
+    border:1px solid blue;
+  }
+  /** Clearfix **/
+  .main-topic::after{
+    content:"";
+    display:block;
+    clear:both;
+  }
+  .left-text{
+    width:50%;
+    float:left;
+  }
+  .right-picture{
+    float:right;
+    width:50%;
+    
+  }
+  .right-picture img{
+    max-width:100%
+    
+  }
+
+  .left-picture{
+    float:left;
+    width:50%;
+  }
+  .left-picture img{
+    max-width:100%
+  }
+
+  .general {
+font-size: 14px;
+outline: none;
+  }
+
+  #center {
+    width:1200px; margin:0 auto;
+    font-size: 10px !important;
+  }
+
+  

@@ -19,6 +19,7 @@ function Card(props) {
     }
     // displays food's information on a card.
     // <h5 className="card-title">{vendor}</h5> displays card
+    
     return (
         <div className="container-fluid" style={{fontSize:24}} onClick={onClick}>
             <div className="card" >
@@ -27,8 +28,8 @@ function Card(props) {
                 <span className="card-body" >
 
 
-                    <span className="card-text" ><strike>$ {price *2.0}</strike> -> $ {price}</span>
-
+                    <span className="card-text" ><strike>$ {price *2.0}</strike> -> $ {price} </span>
+                    <button style={{backgroundColor: "white", border: "white"}}>Add to Cart</button>
                 </span>
             </div>
         </div>

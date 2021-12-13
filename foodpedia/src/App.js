@@ -12,7 +12,9 @@ import Cart from './components/Cart'
 import Forgot from './components/Forgot';
 import Register from './components/Register';
 import Search from './components/Search'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Checkout from "./components/Checkout";
+import OrderConfirmed from "./components/OrderConfirmed";
 
 
 function App(props) {
@@ -28,6 +30,8 @@ function App(props) {
           <Route path='/login' element={<Login />}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/confirmed" element={<OrderConfirmed />} />
           <Route path='/forgot' element={<Forgot/>}/>
           <Route path='/search' element={<Search/>}/>
           <Route path='/restaurant' element={<RestaurantMain/>}/>

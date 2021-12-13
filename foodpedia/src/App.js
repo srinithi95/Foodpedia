@@ -3,7 +3,9 @@ import './App.css';
 import Header from './components/Header'
 import About from './components/About'
 import Login from './components/Login'
-import Restaurant from './components/Restaurant.jsx'
+import RestaurantMain from './components/RestaurantMain.jsx'
+import RestaurantAdd from './components/RestaurantAdd.jsx'
+import RestaurantEdit from './components/RestaurantEdit.jsx'
 import Homepage from './components/Homepage'
 import NavBar from './components/NavBar'
 import Cart from './components/Cart'
@@ -28,7 +30,11 @@ function App(props) {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/forgot' element={<Forgot/>}/>
           <Route path='/search' element={<Search/>}/>
-          <Route path='/restaurant' element={<Restaurant/>}/>
+          <Route path='/restaurant' element={<RestaurantMain/>}/>
+          <Route path="/restaurantAdd" element={<RestaurantAdd/>}/>
+          <Route path="/restaurantEdit" element={<RestaurantEdit/>}/>
+          
+         
         </Routes>
     </div>
   );

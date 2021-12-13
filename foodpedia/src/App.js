@@ -3,14 +3,18 @@ import './App.css';
 import Header from './components/Header'
 import About from './components/About'
 import Login from './components/Login'
-import Restaurant from './components/Restaurant.jsx'
+import RestaurantMain from './components/RestaurantMain.jsx'
+import RestaurantAdd from './components/RestaurantAdd.jsx'
+import RestaurantEdit from './components/RestaurantEdit.jsx'
 import Homepage from './components/Homepage'
 import NavBar from './components/NavBar'
 import Cart from './components/Cart'
 import Forgot from './components/Forgot';
 import Register from './components/Register';
 import Search from './components/Search'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Checkout from "./components/Checkout";
+import OrderConfirmed from "./components/OrderConfirmed";
 
 
 function App(props) {
@@ -26,9 +30,15 @@ function App(props) {
           <Route path='/login' element={<Login />}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/confirmed" element={<OrderConfirmed />} />
           <Route path='/forgot' element={<Forgot/>}/>
           <Route path='/search' element={<Search/>}/>
-          <Route path='/restaurant' element={<Restaurant/>}/>
+          <Route path='/restaurant' element={<RestaurantMain/>}/>
+          <Route path="/restaurantAdd" element={<RestaurantAdd/>}/>
+          <Route path="/restaurantEdit" element={<RestaurantEdit/>}/>
+          
+         
         </Routes>
     </div>
   );

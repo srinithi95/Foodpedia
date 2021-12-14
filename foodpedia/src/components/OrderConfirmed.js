@@ -21,7 +21,7 @@ const OrderConfirmed = () => {
       <div className="mainConfirmPage">
         <div className="ConfirmText">
           <h1>Thank You!</h1>
-          <h2>Your order has been confirmed</h2>
+          <h2>Your order has been confirmed.</h2>
         </div>
         <div className="ConfirmImage">
           <img src={DISH} />
@@ -38,8 +38,8 @@ const OrderConfirmed = () => {
         <Popup
           onclick={handleOrderModal}
           d1="Order No#: 4218433"
-          d2="crab legs - 1"
-          d21="grilled fish - 1"
+          d2="Crab Legs x 1"
+          d21="Grilled Fish x 1"
           d222="Delivery Free"
           d3="Total: $31.98"
           image={Order}
@@ -48,8 +48,8 @@ const OrderConfirmed = () => {
       {modal && (
         <Popup
           onclick={handleModal}
-          d1="Phone: 1122334455"
-          d2="Email: foodpedia.com"
+          d1="Phone: +1 415-123-4567"
+          d2="Email: support@foodpedia.com"
           d3="Address: United States, CA"
           image={Info}
         />

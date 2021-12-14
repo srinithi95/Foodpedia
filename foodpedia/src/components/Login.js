@@ -42,7 +42,15 @@ const Login = (props) => {
         if (emailCheck && passwordCheck) {
             console.log('SUCCESSFUL!')
             props.login(email)
-            navigate('/')
+            if(props.res) {
+                navigate('/checkout')
+
+            } else if(props.restwo){
+                navigate('/restaurant')
+            } else {
+                navigate('/')
+            }
+            
 
         } else {
             console.log('UNSUCCESSUL :(')
@@ -105,7 +113,9 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = state => {
     return {
-        email: state.loginReducer.sessionEmail
+        email: state.loginReducer.sessionEmail,
+        res: state.loginReducer.RES,
+        restwo: state.loginReducer.RESTWO
     }
 }
 

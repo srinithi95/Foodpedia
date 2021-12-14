@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { useNavigate } from 'react-router'
-import { login } from '../redux/actions/loginActions'
+import { login,resTwo } from '../redux/actions/loginActions'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { search } from '../redux/actions/searchActions'
 import { Button, InputGroup, FormControl, Container, Col, Row } from 'react-bootstrap'
 import { BsSearch, BsFillBasket2Fill } from 'react-icons/bs'
 import './Header.css';
+
 
 
 const Header = (props) => {
@@ -36,6 +37,15 @@ const Header = (props) => {
             props.login('')
             navigate('/login')
         } else {
+            navigate('/login')
+        }
+    }
+
+    const onClickRes = () => {
+        if (props.USERMODE) {
+            navigate('/restaurant')
+        } else {
+            dispatch(resTwo())
             navigate('/login')
         }
     }
@@ -109,7 +119,7 @@ const Header = (props) => {
                                     <Link to='/about' style={{ textDecoration: "none", color: '#515874' }}><b>About</b></Link>
                                 </div>
                                 <div className='link'>
-                                    <Link to='/restaurant' style={{ textDecoration: "none", color: '#515874' }}><b>Restaurant</b></Link>
+                                    <div to='/restaurant' style={{ textDecoration: "none", color: '#515874' }} onClick={onClickRes}><b>Restaurant</b></div>
                                 </div>
                                 <div className='link'>
                                     {props.session ? <div style={{ textDecoration: "none", color: '#515874' }} onClick={onClick}><b>Sign Out</b> </div> : <div style={{ textDecoration: "none", color: '#515874' }} onClick={onClick}><b>Sign In</b> </div>}
@@ -167,7 +177,8 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
     return {
-        session: state.loginReducer.sessionEmail
+        session: state.loginReducer.sessionEmail,
+        USERMODE: state.loginReducer.USERMODE
 
     }
 }

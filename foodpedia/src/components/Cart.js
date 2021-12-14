@@ -5,8 +5,26 @@ import CrabLegs from "../images/crabLegs.png";
 import GrilledFish from "../images/grilledFish.png";
 import "./dev.css";
 import { Form, Button, Row, Col, Container, Table } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { res} from '../redux/actions/loginActions'
+import { connect } from "react-redux";
+import { useNavigate } from "react-router";
 
-const Cart = () => {
+const Cart = (props) => {
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const onClick = () => {
+    if(props.USERMODE) {
+
+      navigate('/checkout')
+    } else {
+      dispatch(res())
+      navigate('/login')
+    }
+    
+  }
+
   return (
     <>
       <div className="tab">
@@ -19,7 +37,7 @@ const Cart = () => {
       </div>
       {/* Cart Items Details */}
       {/* <div className="mainContainer">
-          <div className="leftSide"> */}
+          <div className="leftSide"> */}    
       <Container style={{marginBottom: '2rem'}}>
         <Row>
           <Col lg={7} md={6}>
@@ -43,7 +61,8 @@ const Cart = () => {
                   <td>$19.99</td>
                   <td>
                     <select>
-                      <option>1</option>
+                      
+                      <option defaultValue>1</option>
                       <option>2</option>
                       <option>3</option>
                       <option>4</option>
@@ -63,7 +82,7 @@ const Cart = () => {
                   <td>$11.99</td>
                   <td>
                     <select>
-                      <option>1</option>
+                      <option defaultValue>1</option>
                       <option>2</option>
                       <option>3</option>
                       <option>4</option>
@@ -89,13 +108,15 @@ const Cart = () => {
               <h3>Total</h3>
               <h3>$31.98</h3>
             </div>
-            <Link className="linko" to="/checkout">
+            <div className="linko" onClick={onClick}>
               Proceed to Checkout
-            </Link>
+            </div>
             {/* </div> */}
           </Col>
         </Row>
       </Container>
+
+      {console.log(props.USERMODE)}
 
       {/* </div> */}
       {/* <div className="centerLine"></div> */}
@@ -106,4 +127,10 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+
+const mapStateToProps = (state) => {
+  return {
+    USERMODE: state.loginReducer.USERMODE
+  }
+}
+export default connect(mapStateToProps)(Cart);

@@ -5,6 +5,8 @@ const INITIAL_STATE = {
         {name:'jimmy',password:'hello',email:'email@email',restaurant:true}
     ],
     sessionEmail: '',
+    RES:false,
+    RESTWO:false,
 
 }
 
@@ -15,8 +17,21 @@ const loginReducer = (state = INITIAL_STATE, action) => {
             console.log('REDUCER: LOGIN')
             console.log(action.email)
             return {
-                ...state, sessionEmail:action.email
+                ...state, sessionEmail:action.email,USERMODE:true
             };
+        case "RES":
+            console.log('REDUCER: res')
+
+            return {
+                ...state, RES:true
+            }; 
+            
+        case "RESTWO":
+            console.log('REDUCER: res2')
+
+            return {
+                ...state, RESTWO:true
+            };     
         case "REGISTER":
             console.log('REDUCER: REGISTER')
             console.log(state)

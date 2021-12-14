@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useDispatch} from 'react-redux'
 import {addCart} from '../../redux/actions/cartActions'
+import {Button} from 'react-bootstrap'
 
 function Card(props) {
 
@@ -25,11 +26,11 @@ function Card(props) {
             <div className="card" >
                 <p className="card-text">{name}</p>
                 <img src={image} className="card-img-top" alt="..." />
-                <span className="card-body" >
+                <span className="card-body" style={{display:'grid'}}>
 
 
                     <span className="card-text" ><strike>$ {price *2.0}</strike> -> $ {price} </span>
-                    <button style={{backgroundColor: "white", border: "white"}}>Add to Cart</button>
+                    <span><Button className='btn-lg'>Add to Cart</Button></span>
                 </span>
             </div>
         </div>

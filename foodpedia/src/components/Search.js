@@ -8,6 +8,7 @@ import { CardGroup } from 'react-bootstrap'
 import InfoCard from './InfoCard'
 import Pagination from './Pagination';
 import Card from "./card/Card.jsx";
+import { useNavigate } from 'react-router';
 
 const Search = (props) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -84,6 +85,13 @@ const Search = (props) => {
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const current_search_Results = search_results.slice(indexOfFirstPost, indexOfLastPost);
+    
+    // used to navigate
+    const navigate = useNavigate();
+    const onClick = () => {
+        navigate('/test')
+    }
+    
     const paginate = pageNumber => setCurrentPage(pageNumber);
     return (
         <div className="container-fluid">
@@ -107,7 +115,7 @@ const Search = (props) => {
    <div id="card-display" style={{paddingLeft:"5%", minWidth:"18rem"}} className="col-10  mb-4 custom-card">
     <CardGroup style={{ gap: 80, marginBottom: "10px" }} >
     {current_search_Results.map((product) => (
-        <div className="col-md-3 mb-2">
+        <div className="col-md-3 mb-2" onClick={onClick}>
           <InfoCard img={product.image} title={product.name} name='Johnnies and Co'/>
          
           </div>

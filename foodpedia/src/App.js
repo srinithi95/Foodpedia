@@ -16,6 +16,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Checkout from "./components/Checkout";
 import OrderConfirmed from "./components/OrderConfirmed";
 import Restaurant from './components/Restaurant'
+import RegisterRes from './components/RegisterRes';
 
 
 function App(props) {
@@ -30,6 +31,8 @@ function App(props) {
           <Route path='/about' element={<About/>}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path='/registerres' element={<RegisterRes/>}/>
+
           <Route path='/cart' element={<Cart/>}/>
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/test" element={<Restaurant />} />
